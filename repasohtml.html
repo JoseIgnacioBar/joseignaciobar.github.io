@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Repaso HTML</title>
+        <base target="_blank"><!--Esto lo que hace es dar la propiedad target="_blank" a todo el documento, 
+        con lo que todos los links se abren en otra página (haciendo inútil el punto 7, que daba esa propiedad
+        a un solo link de la página)-->
+        <style>
+            .exteriorAcordeon{
+                padding:30px;
+                display:flex;
+                justify-content:center;
+            }
+            details{
+                width:100%;
+                max-width:500px;
+            }
+            summary{
+                background:#f2f2f2;
+                cursor:pointer;
+                padding:15px;
+            }
+            #textoAcord{
+                padding:15px;
+                margin:0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center><h1>Repaso de conceptos de html</h1>
+        <h2>(Con <a href="https://markodenic.com/html-tips/">esta página)</a></h2></center>
+        <h3>12.Acordeón HTML</h3>
+        <!-- Esto del "acordeón" no lo conocía -->
+        <div class="exteriorAcordeon">
+            <details>
+                <summary>Click para ver contenido del "acordeón"</summary>
+                <p id="textoAcord">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </details>
+            </div>
+        <h3>1.El atributo 'loading=lazy'</h3>
+        <!-- No sabía que existiera loading ni ninguno de sus posibles valores, lazy incluido -->
+        <img src="https://media.tenor.com/t2b0qgkBF6EAAAAd/engie-flip.gif" loading="lazy" alt="Engie Flip">
+        <h3>2.Enlaces de correo electrónico, llamadas y SMS</h3>
+        <!-- De este punto en particular no conocía ninguna de las tres cosas -->
+        <a href="mailto:{email}?subject={subject}&body={content}">Envíenos un email</a><br>
+        <a href="tel:{phone}">Llámenos</a><br>
+        <a href="sms:{phone}?body={content}">Envíenos un mensaje</a><br>
+        <h3>3.Listas ordenadas del atributo 'inicio'</h3>
+        <!-- ¡Esto sí que lo conocía! Se me había olvidado, eso sí -->
+        <ol start="11">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Go</li>
+        </ol>
+        <h3>4.El elemento "metro"</h3>
+        <!-- Este otro tampoco lo conocía -->
+        <label for="value1">Low</label>
+        <meter id="value1" min="0" max="100" low="30" high="75" optimum="80" value="25"></meter><br>
+        <label for="value2">Medium</label>
+        <meter id="value2" min="0" max="100" low="30" high="75" optimum="80" value="50"></meter><br>
+        <label for="value3">High</label>
+        <meter id="value3" min="0" max="100" low="30" high="75" optimum="80" value="80"></meter><br>
+        <h3>5.HTML Native Search</h3>
+        <!-- Esto tampoco lo conocía -->
+        <h4>Búsqueda HTML nativa</h4>
+        <input list="items">
+        <datalist id="items">
+            <option value="Busca esto">
+            <option value="O esto">
+            <option value="O esto otro">
+        </datalist>
+        <input type="submit">
+        <h3>6.Elemento Fieldset</h3>
+        <!-- Este creo que nos lo enseñaron como obligatorio en formularios, para agrupar preguntas y eso -->
+        <form>
+            <fieldset>
+                <legend>Elige tu lenguaje de programación favorito</legend>
+                <input type="radio" id="javascript" name="language">
+                <label for="javascript">Javascript</label><br>
+                <input type="radio" id="python" name="language">
+                <label for="python">Python</label><br>
+                <input type="radio" id="java" name="language">
+                <label for="java">Java</label>
+            </fieldset>
+        </form>
+        <h3>7.Window.opener</h3>
+        <!-- Esto tampoco lo conocía -->
+        <a href="https://markodenic.com/html-tips/" target="_blank" rel="noopener">
+            De nuevo, la página usada para repasar estos conceptos, pero ahora se abre en otra pestaña.
+        </a>
+        <h3>8.Base Element</h3>
+        <!--Esto tampoco lo conocía-->
+        <p>Ver el elemento head del documento</p>
+        <h3>11.Native HTML sliders</h3>
+        <!--Esto sí que lo usamos en primero-->
+        <label for="deslizador">Esto es un slider</label>
+        <input type="range" id="sliderPrueba" name="deslizador" min="0" max="100" value="50" step="5">
+        <h3>13.'mark' tag</h3>
+        <!--Curiosamente, esta tampoco me suena-->
+        <p><mark>Esta</mark> palabra está marcada</p>
+        <h3>14.'download' attribute</h3>
+        <!--Esta tampoco la conocía-->
+        <a href="caradeprogramacion.jpeg" download>Mi cara después de programar durante 5 minutos.</a>
+    </body>
+</html>
